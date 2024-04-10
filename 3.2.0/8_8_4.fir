@@ -1,0 +1,9 @@
+FIRRTL version 3.2.0
+; Negative test
+circuit MyModule :
+  module MyModule :
+    input en: UInt<1>
+    input a: UInt<1>
+    wire w: UInt<1>
+    when en :
+      connect w, a
