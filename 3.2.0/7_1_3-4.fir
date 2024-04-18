@@ -5,7 +5,7 @@ circuit MyTop :
     input reset : AsyncReset
     input x : UInt<8>
     output z : UInt<8>
-    regreset y : UInt<8>, clock, reset, UInt(123)
+    regreset y : UInt<8>, clock, reset, UInt(0)
     connect y, x
     connect z, y
     ; ...

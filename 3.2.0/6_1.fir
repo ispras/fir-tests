@@ -1,13 +1,20 @@
 FIRRTL version 3.2.0
 circuit MyTop :
-  extmodule Foo :
-    parameter p1 = 0b101010
-    parameter p2 = 0o52
-    parameter p3 = 0d42
-    parameter p4 = 0h2a
-    parameter p5 = -0b101010
-    parameter p6 = -0o52
-    parameter p7 = -0d42
-    parameter p8 = -0h2a
-    
+  module Foo :
+    output o1: SInt
+    output o2: SInt
+    output o3: SInt
+    output o4: SInt
+    output o5: SInt
+    output o6: SInt
+    output o7: SInt
+    output o8: SInt
+    o1 <= SInt(0b101010)
+    o2 <= SInt(0o52)
+    o3 <= SInt(0d42)
+    o4 <= SInt(0h2a)
+    o5 <= SInt(-0b101010)
+    o6 <= SInt(-0o52)
+    o7 <= SInt(-0d42)
+    o8 <= SInt(-0h2a)
   module MyTop:

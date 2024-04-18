@@ -1,14 +1,14 @@
 FIRRTL version 3.2.0
 circuit MyModule :
   module MyModule :
-    input a: UInt
-    input b: UInt
-    input c: UInt
-    input d: UInt
+    input a: UInt<1>
+    input b: UInt<1>
+    input c: UInt<1>
+    input d: UInt<1>
     input c1: UInt<1>
     input c2: UInt<1>
     input c3: UInt<1>
-    wire x: UInt
+    wire x: UInt<1>
     when c1 :
       connect x, a
     else when c2 :

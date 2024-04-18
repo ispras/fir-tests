@@ -2,5 +2,6 @@ FIRRTL version 3.2.0
 circuit MyTop :
   module MyModule :
     input asyncReset : AsyncReset
-    input reset : Reset
+    output reset : Reset
+    reset <= asyncReset
   module MyTop :

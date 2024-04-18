@@ -1,11 +1,19 @@
 FIRRTL version 3.2.0
 circuit Foo:
-  module Foo:
-    input a: UInt<1>
+  declgroup Bar, bind:
+
+  module Baz:
+    output _a: Probe<UInt<1>, Bar>
+
+    wire a: UInt<1>
 
     group Bar:
       node notA = not(a)
-      group Baz:
-      group Qux:
-        group Quz:
-          node notNotA = not(notA)
+      define _a = probe(notA)
+
+  module Foo:
+
+    inst baz of Baz
+
+    group Bar:
+      node _b = baz._a

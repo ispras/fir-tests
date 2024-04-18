@@ -10,7 +10,7 @@ circuit MyModule:
     wire myinit: SInt
     connect myclock, clock
     connect myreset, reset
-    connect myinit, UInt(0b)
+    connect myinit, SInt<1>(0)
     regreset myreg : SInt, myclock, myreset, myinit
     ; ...
     connect myreg, b

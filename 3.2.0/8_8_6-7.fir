@@ -2,7 +2,7 @@ FIRRTL version 3.2.0
 circuit MyModule :
   module MyModule :
     input x_in: {a: UInt<1>, b: UInt<1>}
-    input y_in: {a: UInt<1>, b: UInt<1>}
+    input y_in: UInt<1>
     input c_in: UInt<1>
     wire x: {a: UInt, b: UInt}
     wire y: UInt<1>

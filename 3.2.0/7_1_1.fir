@@ -3,7 +3,9 @@ circuit MyTop:
   module MyTop :
     ; ...
   module MyModule :
-    input UInt
-    input SInt
-    input UInt<10>
-    input SInt<10>
+    output o1: UInt
+    output o2: SInt
+    input i1: UInt<10>
+    input i2: SInt<10>
+    o1 <= i1
+    o2 <= i2
